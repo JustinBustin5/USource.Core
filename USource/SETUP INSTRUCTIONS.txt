@@ -1,0 +1,24 @@
+USOURCE BY JUSTINBUSTIN
+PLEASE GIVE CREDIT IN SOME WAY
+
+Step 1: Add the package to your Unity project. If you're reading this, you probably already have.
+Step 2: Add user layers:
+	Layer 8: Player
+	Layer 9: Skybox
+	Note: If your project already has layer 8 and 9 taken, you'll need to change the layers on the prefabs manually.
+
+Note: If you're using the 3D skybox, make sure the player prefab starts at 0, 0, 0 (doesn't have to be exact) to ensure the proper function of the 3D skybox.
+
+Manually setting layers: (see Step 2 Note)
+	Make the player prefab and children to whatever layer is named "Player",
+	Make the 3D skybox prefab and children to whatever layer is named "Skybox"
+
+Using the 3D Skybox:
+	1: Use the 3D Skybox version of the player controller
+	2: Place the prefab somewhere out of bounds
+	3: Create objects under the prefab (using the Skybox layer)
+	4: For each object, remove the collider to improve performance
+	5: Set scale field appropriately
+	Note: For larger 3D skyboxes, (entire terrains) be sure to increase the skybox camera's far clipping plane
+
+Note: Make sure the player start position is around 0.1 meters above the ground so the player doesn't get stuck
